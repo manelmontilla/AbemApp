@@ -17,10 +17,10 @@ struct AbemDocument: FileDocument {
     static var writableContentTypes: [UTType] = [.data]
     
     var content: Data
-    var ext:  String
-    init(from content: Data,_ fileExtension:String="") {
+    var filename:  String
+    init(from content: Data,_ filename:String="") {
         self.content = content
-        self.ext = fileExtension
+        self.filename = filename
     }
 
     init(configuration: ReadConfiguration) throws {
@@ -29,12 +29,16 @@ struct AbemDocument: FileDocument {
             throw CocoaError(.fileReadCorruptFile)
         }
         self.content = data
-        self.ext = ""
+        var filename = ""
+        if configuration.file.filename != nil {
+            filename = configuration.file.filename!
+        }
+        self.filename = filename
     }
 
     func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
         var fw = FileWrapper(regularFileWithContents: content)
-        fw.preferredFilename = "file."+self.ext
+        fw.preferredFilename = self.filename
         return fw
     }
     

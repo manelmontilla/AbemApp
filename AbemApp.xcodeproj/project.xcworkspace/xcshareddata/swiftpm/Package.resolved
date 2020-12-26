@@ -6,8 +6,26 @@
         "repositoryURL": "/Users/manel.montilla/develop/abem",
         "state": {
           "branch": "master",
-          "revision": "01f115e2384c7b1793db95d0712a676a714dc0fd",
+          "revision": "41e652af44bb43d65b585f7719fce974511e6ee6",
           "version": null
+        }
+      },
+      {
+        "package": "Down",
+        "repositoryURL": "git@github.com:johnxnguyen/Down.git",
+        "state": {
+          "branch": null,
+          "revision": "731f6bbab24ab208ea2d6a944e3f8a8a9d5273c7",
+          "version": "0.9.4"
+        }
+      },
+      {
+        "package": "Parma",
+        "repositoryURL": "git@github.com:dasautoooo/Parma.git",
+        "state": {
+          "branch": null,
+          "revision": "5aa1de6cdbbd37a38d56f3b55bed94d1dc48ec96",
+          "version": "0.2.0"
         }
       },
       {

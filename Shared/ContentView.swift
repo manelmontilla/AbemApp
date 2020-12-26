@@ -9,13 +9,13 @@ import SwiftUI
 import Foundation
 import UniformTypeIdentifiers
 #if !os(macOS)
-    import MobileCoreServices
+import MobileCoreServices
 #else
-    import CoreServices
+import CoreServices
 #endif
 import abem
 
-struct ContentView: View {
+struct FileEncryptionView: View {
     @State private var isImporting: Bool = false
     @State private var isExporting: Bool = false
     @State private var isEncrypting: Bool = false
@@ -72,7 +72,7 @@ struct ContentView: View {
             return
         }
         let url = try! result.get()
-        let filename = "\(url.lastPathComponent).\(url.pathExtension)"
+        let filename = "\(url.lastPathComponent)"
         var text = ""
         if self.isDecrypting {
             text="Decrypted file saved to: \(filename)"
@@ -87,7 +87,7 @@ struct ContentView: View {
     
     func onTextPasswordChanged(_ newValue: String) {
         if newValue.count == 0 {
-            return
+            self.showPasswordError = true
         }
         if PasswordStrength.Check(newValue) != .strong  {
             self.showPasswordError = true
@@ -99,31 +99,30 @@ struct ContentView: View {
     func encryptFiles(selectedFiles files: [URL]?) {
         do {
             guard files != nil && files!.count > 0 else {
-                throw  ContentViewError.LogicalError(description: "Select a file to encrypt")
+                throw  ViewError.LogicalError(description: "Select a file to encrypt")
+            }
+            guard self.password.val.count > 0 else {
+                throw ViewError.LogicalError(description: "password can not be empty")
             }
             let file = files![0]
-            let filename = file.lastPathComponent
-            let ext = NSURL(fileURLWithPath: filename).pathExtension
-            let content = try Data(contentsOf:file)
-            var safeExt = ""
-            if ext != nil {
-                safeExt =  ext!
-            }
+            var filename = file.lastPathComponent
+            var content = try Data(contentsOf:file)
             var res:Abem.Ciphertext?
-            res = try Abem.Encrypt(data: content, metadata: safeExt, with: password.val)
-            let encryptedFile = AbemDocument(from:res!.Combined())
+            res = try Abem.Encrypt(data: content, metadata: filename, with: password.val)
+            content.resetBytes(in:0...content.count-1)
+            filename = file.deletingPathExtension().appendingPathExtension("abem").lastPathComponent
+            let encryptedFile = AbemDocument(from:res!.Combined(),filename)
             let title = "Task finished"
             let text = """
-            The content of the file has been encrypted.
-            Now you will we asked to move those contents to a file
-            of your choice.
+            The contents of the file have been encrypted.
+            Save the ciphertext to a file.
             """
             DispatchQueue.main.sync {
                 self.password.zero(with:"0")
                 self.password.val = ""
                 self.documentExportContent = encryptedFile
                 self.documentExportType = .data
-                self.showModalMessage(title,text)
+                self.showModalMessage(title, text)
             }
             
         } catch let error {
@@ -139,24 +138,27 @@ struct ContentView: View {
     func decryptFiles(selectedFiles files: [URL]?) {
         do {
             guard files != nil && files!.count > 0 else {
-                throw  ContentViewError.LogicalError(description: "Select a file to encrypt")
+                throw  ViewError.LogicalError(description: "Select a file to encrypt")
+            }
+            guard self.password.val.count > 0 else {
+                throw ViewError.LogicalError(description: "Password cannot be empty")
             }
             let file = files![0]
             let content = try Data(contentsOf:file)
             let ciphertext = Abem.Ciphertext(from: content)
             let clear = try Abem.Decrypt(ciphertext, with: password.val)
-            
             // Set the type of the file to export to the original one.
-            // var ut = UTType.init(filenameExtension: clear.metadata)
-            var ut = clear.metadata.GetUTType()
+            var ext = NSURL(fileURLWithPath: clear.metadata).pathExtension
+            if ext == nil {
+                ext = ""
+            }
+            var ut = ext!.GetUTType()
             if ut == nil {
                 ut = UTType.data
             }
-            let clearDocument = AbemDocument(from:clear.payload,clear.metadata)
+            let clearDocument = AbemDocument(from:clear.payload, clear.metadata)
             // Hack to be able to specify the extension of the file to export.
             AbemDocument.writableContentTypes.append(ut!)
-                
-            
             let title = "Task finished"
             let text  = """
                 The content of the file has been decrypted.
@@ -166,7 +168,6 @@ struct ContentView: View {
             DispatchQueue.main.sync {
                 self.documentExportContent = clearDocument
                 self.documentExportType = ut!
-                print("export type \(self.documentExportType.identifier), ut \(ut!.identifier)")
                 self.showModalMessage(title, text)
             }
             
@@ -252,15 +253,10 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView()
+            FileEncryptionView()
         }
     }
 }
-
-enum ContentViewError:Error {
-    case LogicalError(description: String)
-}
-
 
 extension URL {
     func mimeType() -> String {

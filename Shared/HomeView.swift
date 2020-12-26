@@ -7,26 +7,25 @@
 
 import Foundation
 import SwiftUI
+import Parma
 
 struct HomeView: View {
-    @State private var selectedTab = 0
     
     var body: some View {
         
-        TabView(selection: $selectedTab) {
-            ContentView()
+        TabView() {
+            FileEncryptionView()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
                 .tag(0)
-            Text("Help")
+           HelpView()
                 .tabItem {
-                    Image(systemName:"questionmark")
-                    Text("Help")
-                }
-            
-        }.accentColor(.blue)
+                Image(systemName:"questionmark")
+                Text("Help")
+            }
+        }
     }
 }
 
