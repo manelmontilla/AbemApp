@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD83730E258E521B00A78E82 /* AbemDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD83730D258E521B00A78E82 /* AbemDocument.swift */; };
+		BD83730F258E521B00A78E82 /* AbemDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD83730D258E521B00A78E82 /* AbemDocument.swift */; };
+		BD8E8C89258D2C6200DBE22E /* RunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E8C88258D2C6200DBE22E /* RunningView.swift */; };
+		BD8E8C8A258D2C6200DBE22E /* RunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E8C88258D2C6200DBE22E /* RunningView.swift */; };
+		BDB34F312583E5210022DC19 /* AbemAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB34F1E2583E51E0022DC19 /* AbemAppApp.swift */; };
+		BDB34F322583E5210022DC19 /* AbemAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB34F1E2583E51E0022DC19 /* AbemAppApp.swift */; };
+		BDB34F332583E5210022DC19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB34F1F2583E51E0022DC19 /* ContentView.swift */; };
+		BDB34F342583E5210022DC19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB34F1F2583E51E0022DC19 /* ContentView.swift */; };
+		BDB34F352583E5210022DC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB34F202583E5200022DC19 /* Assets.xcassets */; };
+		BDB34F362583E5210022DC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB34F202583E5200022DC19 /* Assets.xcassets */; };
+		BDFC9A4E2591015500D30F5F /* abem in Frameworks */ = {isa = PBXBuildFile; productRef = BDFC9A4D2591015500D30F5F /* abem */; };
+		BDFC9A5E2591069300D30F5F /* AcrivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC9A5D2591069300D30F5F /* AcrivityIndicator.swift */; };
+		BDFC9A7425910BB600D30F5F /* abem in Frameworks */ = {isa = PBXBuildFile; productRef = BDFC9A7325910BB600D30F5F /* abem */; };
+		BDFC9AAC25921C0C00D30F5F /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC9AAB25921C0C00D30F5F /* ActivityIndicator.swift */; };
+		BDFC9ABF2594F1E800D30F5F /* ZeroableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC9ABE2594F1E800D30F5F /* ZeroableString.swift */; };
+		BDFC9AC02594F1E800D30F5F /* ZeroableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC9ABE2594F1E800D30F5F /* ZeroableString.swift */; };
+		BDFC9ACA2596600B00D30F5F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC9AC92596600B00D30F5F /* HomeView.swift */; };
+		BDFC9ACB2596600B00D30F5F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC9AC92596600B00D30F5F /* HomeView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BD83730D258E521B00A78E82 /* AbemDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbemDocument.swift; sourceTree = "<group>"; };
+		BD8E8C88258D2C6200DBE22E /* RunningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningView.swift; sourceTree = "<group>"; };
+		BDB34F1E2583E51E0022DC19 /* AbemAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbemAppApp.swift; sourceTree = "<group>"; };
+		BDB34F1F2583E51E0022DC19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BDB34F202583E5200022DC19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDB34F252583E5210022DC19 /* AbemApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbemApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDB34F282583E5210022DC19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDB34F2D2583E5210022DC19 /* AbemApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbemApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDB34F2F2583E5210022DC19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDB34F302583E5210022DC19 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		BDB34F41258538CB0022DC19 /* AbemApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AbemApp.entitlements; sourceTree = "<group>"; };
+		BDFC9A5D2591069300D30F5F /* AcrivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcrivityIndicator.swift; sourceTree = "<group>"; };
+		BDFC9A6825910A0700D30F5F /* AbemAppDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AbemAppDebug.entitlements; sourceTree = "<group>"; };
+		BDFC9AAB25921C0C00D30F5F /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		BDFC9ABE2594F1E800D30F5F /* ZeroableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroableString.swift; sourceTree = "<group>"; };
+		BDFC9AC92596600B00D30F5F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDB34F222583E5210022DC19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDFC9A7425910BB600D30F5F /* abem in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDB34F2A2583E5210022DC19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDFC9A4E2591015500D30F5F /* abem in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BDB34F182583E51D0022DC19 = {
+			isa = PBXGroup;
+			children = (
+				BDFC9A6825910A0700D30F5F /* AbemAppDebug.entitlements */,
+				BDB34F41258538CB0022DC19 /* AbemApp.entitlements */,
+				BDB34F1D2583E51E0022DC19 /* Shared */,
+				BDB34F272583E5210022DC19 /* iOS */,
+				BDB34F2E2583E5210022DC19 /* macOS */,
+				BDB34F262583E5210022DC19 /* Products */,
+				BDFC9A4C2591015500D30F5F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BDB34F1D2583E51E0022DC19 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BDB34F1E2583E51E0022DC19 /* AbemAppApp.swift */,
+				BDB34F1F2583E51E0022DC19 /* ContentView.swift */,
+				BDB34F202583E5200022DC19 /* Assets.xcassets */,
+				BD8E8C88258D2C6200DBE22E /* RunningView.swift */,
+				BD83730D258E521B00A78E82 /* AbemDocument.swift */,
+				BDFC9ABE2594F1E800D30F5F /* ZeroableString.swift */,
+				BDFC9AC92596600B00D30F5F /* HomeView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		BDB34F262583E5210022DC19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDB34F252583E5210022DC19 /* AbemApp.app */,
+				BDB34F2D2583E5210022DC19 /* AbemApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDB34F272583E5210022DC19 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BDFC9A5D2591069300D30F5F /* AcrivityIndicator.swift */,
+				BDB34F282583E5210022DC19 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		BDB34F2E2583E5210022DC19 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				BDB34F2F2583E5210022DC19 /* Info.plist */,
+				BDB34F302583E5210022DC19 /* macOS.entitlements */,
+				BDFC9AAB25921C0C00D30F5F /* ActivityIndicator.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		BDFC9A4C2591015500D30F5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDB34F242583E5210022DC19 /* AbemApp (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDB34F392583E5210022DC19 /* Build configuration list for PBXNativeTarget "AbemApp (iOS)" */;
+			buildPhases = (
+				BDB34F212583E5210022DC19 /* Sources */,
+				BDB34F222583E5210022DC19 /* Frameworks */,
+				BDB34F232583E5210022DC19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AbemApp (iOS)";
+			packageProductDependencies = (
+				BDFC9A7325910BB600D30F5F /* abem */,
+			);
+			productName = "AbemApp (iOS)";
+			productReference = BDB34F252583E5210022DC19 /* AbemApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BDB34F2C2583E5210022DC19 /* AbemApp (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDB34F3C2583E5210022DC19 /* Build configuration list for PBXNativeTarget "AbemApp (macOS)" */;
+			buildPhases = (
+				BDB34F292583E5210022DC19 /* Sources */,
+				BDB34F2A2583E5210022DC19 /* Frameworks */,
+				BDB34F2B2583E5210022DC19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AbemApp (macOS)";
+			packageProductDependencies = (
+				BDFC9A4D2591015500D30F5F /* abem */,
+			);
+			productName = "AbemApp (macOS)";
+			productReference = BDB34F2D2583E5210022DC19 /* AbemApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDB34F192583E51D0022DC19 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					BDB34F242583E5210022DC19 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					BDB34F2C2583E5210022DC19 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = BDB34F1C2583E51D0022DC19 /* Build configuration list for PBXProject "AbemApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDB34F182583E51D0022DC19;
+			packageReferences = (
+				BDB34F4F258669A80022DC19 /* XCRemoteSwiftPackageReference "abem" */,
+			);
+			productRefGroup = BDB34F262583E5210022DC19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDB34F242583E5210022DC19 /* AbemApp (iOS) */,
+				BDB34F2C2583E5210022DC19 /* AbemApp (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDB34F232583E5210022DC19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDB34F352583E5210022DC19 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDB34F2B2583E5210022DC19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDB34F362583E5210022DC19 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDB34F212583E5210022DC19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDB34F332583E5210022DC19 /* ContentView.swift in Sources */,
+				BDFC9ACA2596600B00D30F5F /* HomeView.swift in Sources */,
+				BD8E8C89258D2C6200DBE22E /* RunningView.swift in Sources */,
+				BD83730E258E521B00A78E82 /* AbemDocument.swift in Sources */,
+				BDFC9A5E2591069300D30F5F /* AcrivityIndicator.swift in Sources */,
+				BDFC9ABF2594F1E800D30F5F /* ZeroableString.swift in Sources */,
+				BDB34F312583E5210022DC19 /* AbemAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDB34F292583E5210022DC19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDFC9AC02594F1E800D30F5F /* ZeroableString.swift in Sources */,
+				BDB34F342583E5210022DC19 /* ContentView.swift in Sources */,
+				BD8E8C8A258D2C6200DBE22E /* RunningView.swift in Sources */,
+				BD83730F258E521B00A78E82 /* AbemDocument.swift in Sources */,
+				BDFC9ACB2596600B00D30F5F /* HomeView.swift in Sources */,
+				BDFC9AAC25921C0C00D30F5F /* ActivityIndicator.swift in Sources */,
+				BDB34F322583E5210022DC19 /* AbemAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BDB34F372583E5210022DC19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BDB34F382583E5210022DC19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		BDB34F3A2583E5210022DC19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AbemApp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.AbemApp;
+				PRODUCT_NAME = AbemApp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+			};
+			name = Debug;
+		};
+		BDB34F3B2583E5210022DC19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AbemApp.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.AbemApp;
+				PRODUCT_NAME = AbemApp;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDB34F3D2583E5210022DC19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AbemAppDebug.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development: manelmontilla@hotmail.com (XF3DNT244M)";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "--deep";
+				PRODUCT_BUNDLE_IDENTIFIER = me.AbemApp;
+				PRODUCT_NAME = AbemApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BDB34F3E2583E5210022DC19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development: manelmontilla@hotmail.com (XF3DNT244M)";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "--deep";
+				PRODUCT_BUNDLE_IDENTIFIER = me.AbemApp;
+				PRODUCT_NAME = AbemApp;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDB34F1C2583E51D0022DC19 /* Build configuration list for PBXProject "AbemApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDB34F372583E5210022DC19 /* Debug */,
+				BDB34F382583E5210022DC19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDB34F392583E5210022DC19 /* Build configuration list for PBXNativeTarget "AbemApp (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDB34F3A2583E5210022DC19 /* Debug */,
+				BDB34F3B2583E5210022DC19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDB34F3C2583E5210022DC19 /* Build configuration list for PBXNativeTarget "AbemApp (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDB34F3D2583E5210022DC19 /* Debug */,
+				BDB34F3E2583E5210022DC19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BDB34F4F258669A80022DC19 /* XCRemoteSwiftPackageReference "abem" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "file:///Users/manel.montilla/develop/abem";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BDFC9A4D2591015500D30F5F /* abem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDB34F4F258669A80022DC19 /* XCRemoteSwiftPackageReference "abem" */;
+			productName = abem;
+		};
+		BDFC9A7325910BB600D30F5F /* abem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDB34F4F258669A80022DC19 /* XCRemoteSwiftPackageReference "abem" */;
+			productName = abem;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BDB34F192583E51D0022DC19 /* Project object */;
+}
