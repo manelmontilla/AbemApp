@@ -89,7 +89,7 @@ struct FileEncryptionView: View {
         if newValue.count == 0 {
             self.showPasswordError = true
         }
-        if PasswordStrength.Check(newValue) != .strong  {
+        if Abem.PasswordStrength.Check(newValue) != .strong  {
             self.showPasswordError = true
         } else {
             self.showPasswordError = false
@@ -206,7 +206,7 @@ struct FileEncryptionView: View {
                 Spacer()
                 HStack() {
                     Button(action: {
-                        guard PasswordStrength.Check(password.val) == .strong else {
+                        guard Abem.PasswordStrength.Check(password.val) == .strong else {
                             self.showPasswordError = true
                             return
                         }
