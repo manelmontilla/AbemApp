@@ -171,11 +171,18 @@ struct FileEncryptionView: View {
                 self.showModalMessage(title, text)
             }
             
+        } catch Abem.AbemError.decryptError {
+            let error = ViewError.LogicalError(description: "Error decrypting file")
+            DispatchQueue.main.sync {
+                showModalError(error.localizedDescription)
+            }
+             
         } catch let error {
             DispatchQueue.main.sync {
                 showModalError(error.localizedDescription)
             }
         }
+        
         DispatchQueue.main.sync {
             self.isLoading = false
         }
