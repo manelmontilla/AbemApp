@@ -14,13 +14,19 @@ struct HomeView: View {
     var body: some View {
         
         TabView() {
+           
             FileEncryptionView()
                 .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
+                    Image(systemName: "lock")
+                    Text("Encrypt")
                 }
-                .tag(0)
-           HelpView()
+            
+            FileDecryptionView()
+                .tabItem {
+                    Image(systemName: "lock.open")
+                    Text("Dencrypt")
+                }
+            HelpView()
                 .tabItem {
                 Image(systemName:"questionmark")
                 Text("Help")

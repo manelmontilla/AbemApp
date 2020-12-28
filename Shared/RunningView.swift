@@ -9,6 +9,7 @@ import SwiftUI
 struct LoadingView<Content>: View where Content: View {
 
     @Binding var isShowing: Bool
+    var text: String
     var content: () -> Content
 
     var body: some View {
@@ -19,9 +20,9 @@ struct LoadingView<Content>: View where Content: View {
                     .blur(radius: self.isShowing ? 3 : 0)
 
                 VStack {
-                    Text("Loading...")
+                    Text(self.text)
                     #if os(macOS)
-                    ActivityIndicator(isAnimating:.constant(true))
+                    ActivityIndicator(isAnimating: .constant(true))
                     #else
                     ActivityIndicator(isAnimating: .constant(true), style:.large)
                     #endif

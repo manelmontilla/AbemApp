@@ -17,14 +17,16 @@
 		BD5208D22599353C00CA2DC6 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5208D02599353C00CA2DC6 /* HelpView.swift */; };
 		BD5208D625993DC100CA2DC6 /* ViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5208D525993DC100CA2DC6 /* ViewError.swift */; };
 		BD5208D725993DC100CA2DC6 /* ViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5208D525993DC100CA2DC6 /* ViewError.swift */; };
+		BD5208E1259A3F2900CA2DC6 /* FileDecryptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5208E0259A3F2900CA2DC6 /* FileDecryptionView.swift */; };
+		BD5208E2259A3F2900CA2DC6 /* FileDecryptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5208E0259A3F2900CA2DC6 /* FileDecryptionView.swift */; };
 		BD83730E258E521B00A78E82 /* AbemDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD83730D258E521B00A78E82 /* AbemDocument.swift */; };
 		BD83730F258E521B00A78E82 /* AbemDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD83730D258E521B00A78E82 /* AbemDocument.swift */; };
 		BD8E8C89258D2C6200DBE22E /* RunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E8C88258D2C6200DBE22E /* RunningView.swift */; };
 		BD8E8C8A258D2C6200DBE22E /* RunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E8C88258D2C6200DBE22E /* RunningView.swift */; };
 		BDB34F312583E5210022DC19 /* AbemAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB34F1E2583E51E0022DC19 /* AbemAppApp.swift */; };
 		BDB34F322583E5210022DC19 /* AbemAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB34F1E2583E51E0022DC19 /* AbemAppApp.swift */; };
-		BDB34F332583E5210022DC19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB34F1F2583E51E0022DC19 /* ContentView.swift */; };
-		BDB34F342583E5210022DC19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB34F1F2583E51E0022DC19 /* ContentView.swift */; };
+		BDB34F332583E5210022DC19 /* FileEncryptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB34F1F2583E51E0022DC19 /* FileEncryptionView.swift */; };
+		BDB34F342583E5210022DC19 /* FileEncryptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB34F1F2583E51E0022DC19 /* FileEncryptionView.swift */; };
 		BDB34F352583E5210022DC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB34F202583E5200022DC19 /* Assets.xcassets */; };
 		BDB34F362583E5210022DC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB34F202583E5200022DC19 /* Assets.xcassets */; };
 		BDFC9A4E2591015500D30F5F /* abem in Frameworks */ = {isa = PBXBuildFile; productRef = BDFC9A4D2591015500D30F5F /* abem */; };
@@ -41,10 +43,11 @@
 		BD5208B9259901B900CA2DC6 /* Help.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Help.md; sourceTree = "<group>"; };
 		BD5208D02599353C00CA2DC6 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		BD5208D525993DC100CA2DC6 /* ViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewError.swift; sourceTree = "<group>"; };
+		BD5208E0259A3F2900CA2DC6 /* FileDecryptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDecryptionView.swift; sourceTree = "<group>"; };
 		BD83730D258E521B00A78E82 /* AbemDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbemDocument.swift; sourceTree = "<group>"; };
 		BD8E8C88258D2C6200DBE22E /* RunningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningView.swift; sourceTree = "<group>"; };
 		BDB34F1E2583E51E0022DC19 /* AbemAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbemAppApp.swift; sourceTree = "<group>"; };
-		BDB34F1F2583E51E0022DC19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BDB34F1F2583E51E0022DC19 /* FileEncryptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileEncryptionView.swift; sourceTree = "<group>"; };
 		BDB34F202583E5200022DC19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDB34F252583E5210022DC19 /* AbemApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbemApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB34F282583E5210022DC19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				BDB34F1E2583E51E0022DC19 /* AbemAppApp.swift */,
-				BDB34F1F2583E51E0022DC19 /* ContentView.swift */,
+				BDB34F1F2583E51E0022DC19 /* FileEncryptionView.swift */,
 				BDB34F202583E5200022DC19 /* Assets.xcassets */,
 				BD8E8C88258D2C6200DBE22E /* RunningView.swift */,
 				BD83730D258E521B00A78E82 /* AbemDocument.swift */,
@@ -109,6 +112,7 @@
 				BD5208B9259901B900CA2DC6 /* Help.md */,
 				BD5208D02599353C00CA2DC6 /* HelpView.swift */,
 				BD5208D525993DC100CA2DC6 /* ViewError.swift */,
+				BD5208E0259A3F2900CA2DC6 /* FileDecryptionView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -262,12 +266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDB34F332583E5210022DC19 /* ContentView.swift in Sources */,
+				BDB34F332583E5210022DC19 /* FileEncryptionView.swift in Sources */,
 				BD5208D625993DC100CA2DC6 /* ViewError.swift in Sources */,
 				BDFC9ACA2596600B00D30F5F /* HomeView.swift in Sources */,
 				BD8E8C89258D2C6200DBE22E /* RunningView.swift in Sources */,
 				BD83730E258E521B00A78E82 /* AbemDocument.swift in Sources */,
 				BDFC9A5E2591069300D30F5F /* AcrivityIndicator.swift in Sources */,
+				BD5208E1259A3F2900CA2DC6 /* FileDecryptionView.swift in Sources */,
 				BD5208D12599353C00CA2DC6 /* HelpView.swift in Sources */,
 				BDFC9ABF2594F1E800D30F5F /* ZeroableString.swift in Sources */,
 				BDB34F312583E5210022DC19 /* AbemAppApp.swift in Sources */,
@@ -280,10 +285,11 @@
 			files = (
 				BDFC9AC02594F1E800D30F5F /* ZeroableString.swift in Sources */,
 				BD5208D725993DC100CA2DC6 /* ViewError.swift in Sources */,
-				BDB34F342583E5210022DC19 /* ContentView.swift in Sources */,
+				BDB34F342583E5210022DC19 /* FileEncryptionView.swift in Sources */,
 				BD8E8C8A258D2C6200DBE22E /* RunningView.swift in Sources */,
 				BD83730F258E521B00A78E82 /* AbemDocument.swift in Sources */,
 				BDFC9ACB2596600B00D30F5F /* HomeView.swift in Sources */,
+				BD5208E2259A3F2900CA2DC6 /* FileDecryptionView.swift in Sources */,
 				BD5208D22599353C00CA2DC6 /* HelpView.swift in Sources */,
 				BDFC9AAC25921C0C00D30F5F /* ActivityIndicator.swift in Sources */,
 				BDB34F322583E5210022DC19 /* AbemAppApp.swift in Sources */,
