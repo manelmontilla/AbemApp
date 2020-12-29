@@ -1,8 +1,8 @@
 # Help
 
-## Warnings
+## Warning
 
-**This application did not go through any security assessment.It should not be trusted to encrypt any sensitive information**
+**This application did not go through any security assessment. It should not be trusted to encrypt any sensitive information.**
 
 ## Encrypting a file
 Type a password in the password text box.
