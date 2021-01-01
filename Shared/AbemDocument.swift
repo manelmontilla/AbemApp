@@ -37,7 +37,7 @@ struct AbemDocument: FileDocument {
     }
 
     func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
-        var fw = FileWrapper(regularFileWithContents: content)
+        let fw = FileWrapper(regularFileWithContents: content)
         fw.preferredFilename = self.filename
         return fw
     }
