@@ -91,7 +91,7 @@ struct FileDecryptionView: View {
             let clearDocument = AbemDocument(from:clear.payload, clear.metadata)
             // Hack to be able to specify the extension of the file to export.
             AbemDocument.writableContentTypes.append(ut!)
-            let title = "Task finished"
+            let title = ""
             let text  = """
                 The content of the file has been decrypted.
                 Now you will we asked to move those contents to a file

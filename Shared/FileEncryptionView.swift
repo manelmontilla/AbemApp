@@ -96,7 +96,7 @@ struct FileEncryptionView: View {
             content.resetBytes(in:0...content.count-1)
             filename = file.deletingPathExtension().appendingPathExtension("abem").lastPathComponent
             let encryptedFile = AbemDocument(from:res!.Combined(),filename)
-            let title = "Task finished"
+            let title = ""
             let text = """
             The contents of the file have been encrypted.
             Save the ciphertext to a file.
