@@ -29,9 +29,9 @@
 		BDB34F342583E5210022DC19 /* FileEncryptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB34F1F2583E51E0022DC19 /* FileEncryptionView.swift */; };
 		BDB34F352583E5210022DC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB34F202583E5200022DC19 /* Assets.xcassets */; };
 		BDB34F362583E5210022DC19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB34F202583E5200022DC19 /* Assets.xcassets */; };
-		BDFC9A4E2591015500D30F5F /* abem in Frameworks */ = {isa = PBXBuildFile; productRef = BDFC9A4D2591015500D30F5F /* abem */; };
+		BDCB30BF259F3B3A00E42224 /* abem in Frameworks */ = {isa = PBXBuildFile; productRef = BDCB30BE259F3B3A00E42224 /* abem */; };
+		BDCB30C3259F3B5A00E42224 /* abem in Frameworks */ = {isa = PBXBuildFile; productRef = BDCB30C2259F3B5A00E42224 /* abem */; };
 		BDFC9A5E2591069300D30F5F /* AcrivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC9A5D2591069300D30F5F /* AcrivityIndicator.swift */; };
-		BDFC9A7425910BB600D30F5F /* abem in Frameworks */ = {isa = PBXBuildFile; productRef = BDFC9A7325910BB600D30F5F /* abem */; };
 		BDFC9AAC25921C0C00D30F5F /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC9AAB25921C0C00D30F5F /* ActivityIndicator.swift */; };
 		BDFC9ABF2594F1E800D30F5F /* ZeroableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC9ABE2594F1E800D30F5F /* ZeroableString.swift */; };
 		BDFC9AC02594F1E800D30F5F /* ZeroableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC9ABE2594F1E800D30F5F /* ZeroableString.swift */; };
@@ -67,9 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDCB30BF259F3B3A00E42224 /* abem in Frameworks */,
 				BD5208C9259906E600CA2DC6 /* Parma in Frameworks */,
 				BD5208C22599064000CA2DC6 /* Down in Frameworks */,
-				BDFC9A7425910BB600D30F5F /* abem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,9 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDCB30C3259F3B5A00E42224 /* abem in Frameworks */,
 				BD5208CD259906EF00CA2DC6 /* Parma in Frameworks */,
 				BD5208C62599064C00CA2DC6 /* Down in Frameworks */,
-				BDFC9A4E2591015500D30F5F /* abem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,9 +169,9 @@
 			);
 			name = "AbemApp (iOS)";
 			packageProductDependencies = (
-				BDFC9A7325910BB600D30F5F /* abem */,
 				BD5208C12599064000CA2DC6 /* Down */,
 				BD5208C8259906E600CA2DC6 /* Parma */,
+				BDCB30BE259F3B3A00E42224 /* abem */,
 			);
 			productName = "AbemApp (iOS)";
 			productReference = BDB34F252583E5210022DC19 /* AbemApp.app */;
@@ -191,9 +191,9 @@
 			);
 			name = "AbemApp (macOS)";
 			packageProductDependencies = (
-				BDFC9A4D2591015500D30F5F /* abem */,
 				BD5208C52599064C00CA2DC6 /* Down */,
 				BD5208CC259906EF00CA2DC6 /* Parma */,
+				BDCB30C2259F3B5A00E42224 /* abem */,
 			);
 			productName = "AbemApp (macOS)";
 			productReference = BDB34F2D2583E5210022DC19 /* AbemApp.app */;
@@ -226,9 +226,9 @@
 			);
 			mainGroup = BDB34F182583E51D0022DC19;
 			packageReferences = (
-				BDB34F4F258669A80022DC19 /* XCRemoteSwiftPackageReference "abem" */,
 				BD5208C02599064000CA2DC6 /* XCRemoteSwiftPackageReference "Down" */,
 				BD5208C7259906E600CA2DC6 /* XCRemoteSwiftPackageReference "Parma" */,
+				BDCB30BD259F3B3A00E42224 /* XCRemoteSwiftPackageReference "abem" */,
 			);
 			productRefGroup = BDB34F262583E5210022DC19 /* Products */;
 			projectDirPath = "";
@@ -566,9 +566,9 @@
 				minimumVersion = 0.2.0;
 			};
 		};
-		BDB34F4F258669A80022DC19 /* XCRemoteSwiftPackageReference "abem" */ = {
+		BDCB30BD259F3B3A00E42224 /* XCRemoteSwiftPackageReference "abem" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "file:///Users/manel.montilla/develop/abem";
+			repositoryURL = "git@github.com:manelmontilla/abem.git";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -597,14 +597,14 @@
 			package = BD5208C7259906E600CA2DC6 /* XCRemoteSwiftPackageReference "Parma" */;
 			productName = Parma;
 		};
-		BDFC9A4D2591015500D30F5F /* abem */ = {
+		BDCB30BE259F3B3A00E42224 /* abem */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BDB34F4F258669A80022DC19 /* XCRemoteSwiftPackageReference "abem" */;
+			package = BDCB30BD259F3B3A00E42224 /* XCRemoteSwiftPackageReference "abem" */;
 			productName = abem;
 		};
-		BDFC9A7325910BB600D30F5F /* abem */ = {
+		BDCB30C2259F3B5A00E42224 /* abem */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BDB34F4F258669A80022DC19 /* XCRemoteSwiftPackageReference "abem" */;
+			package = BDCB30BD259F3B3A00E42224 /* XCRemoteSwiftPackageReference "abem" */;
 			productName = abem;
 		};
 /* End XCSwiftPackageProductDependency section */

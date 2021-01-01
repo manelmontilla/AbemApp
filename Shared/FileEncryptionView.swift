@@ -122,7 +122,7 @@ struct FileEncryptionView: View {
     var body: some View {
         LoadingView(isShowing: $isLoading, text: "Encrypting"){
             VStack(alignment:HorizontalAlignment.center) {
-                Text("Abem").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).bold()
+                Text("A8EM").font(.title).foregroundColor(.blue).background(Color.yellow).padding(.top, 10)
                 Divider()
                 HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
                     SecureField("File Password",text:$password.val)
