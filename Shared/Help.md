@@ -15,7 +15,6 @@ Type a password in the password text box.
 If the password is correct and the ciphertext has not been modified, the file will be decrypted and you will be asked to save it using the original filename.
 
 ## Algorithms
-
 Abem uses the library [libsodium](https://github.com/jedisct1/libsodium).
 Concretely it uses the **Argon2id** to derive the encryption key and the
 **XSalsa20 with Poly1305 MAC** for the symmetric authenticated encryption.
