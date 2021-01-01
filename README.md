@@ -3,6 +3,8 @@
 Abem is a very simple IOS and MacOS application to allows to easily
 encrypt and decrypt files.
 
+![](Abem.gif)
+
 For more information read the Help file [here](Shared/Help.md).
 
 ## Warning
