@@ -29,7 +29,7 @@ struct FileDecryptionView: View {
     @State private var documentExportContent: AbemDocument? = nil
     @State private var documentExportType: UTType = UTType.data
     
-    func showModalMessage(_ title:String, _ text:String) {
+    func showModalMessage(body text:String, _ title:String = "") {
         self.alertTitle = title
         self.alertText = text
         self.isAlertShowing = true
@@ -62,11 +62,11 @@ struct FileDecryptionView: View {
         let filename = "\(url.lastPathComponent)"
         let text = "Decrypted file saved to: \(filename)"
         self.isDecrypting = false
-        self.showModalMessage("Action Finished", text)
+        self.showModalMessage(body: text, "Action Finished")
     }
     
     
-   func decryptFiles(selectedFiles files: [URL]?) {
+    func decryptFiles(selectedFiles files: [URL]?) {
         do {
             guard files != nil && files!.count > 0 else {
                 throw  ViewError.LogicalError(description: "Select a file to encrypt")
@@ -78,7 +78,7 @@ struct FileDecryptionView: View {
             let content = try Data(contentsOf:file)
             let ciphertext = Abem.Ciphertext(from: content)
             let clear = try Abem.Decrypt(ciphertext, with: password.val)
-           
+            
             // Set the type of the file to export to the original one.
             var ext = NSURL(fileURLWithPath: clear.metadata).pathExtension
             if ext == nil {
@@ -91,7 +91,7 @@ struct FileDecryptionView: View {
             let clearDocument = AbemDocument(from:clear.payload, clear.metadata)
             // Hack to be able to specify the extension of the file to export.
             AbemDocument.writableContentTypes.append(ut!)
-            let title = ""
+            let title = "Finished"
             let text  = """
                 The content of the file has been decrypted.
                 Now you will we asked to move those contents to a file
@@ -102,7 +102,7 @@ struct FileDecryptionView: View {
                 password.val = ""
                 self.documentExportContent = clearDocument
                 self.documentExportType = ut!
-                self.showModalMessage(title, text)
+                self.showModalMessage(body: text, title)
             }
             
         } catch Abem.AbemError.decryptError {
@@ -110,7 +110,7 @@ struct FileDecryptionView: View {
             DispatchQueue.main.sync {
                 showModalError(error.localizedDescription)
             }
-             
+            
         } catch let error {
             DispatchQueue.main.sync {
                 showModalError(error.localizedDescription)
@@ -129,7 +129,7 @@ struct FileDecryptionView: View {
                 Text("A8EM").font(.title).foregroundColor(.blue).background(Color.yellow).padding(.top, 10)
                 Divider()
                 HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
-                    SecureField("File Password",text:$password.val)
+                    SecureField("Password",text:$password.val)
                         .padding().border(Color.blue)
                     
                     if showPasswordError {

@@ -29,7 +29,7 @@ struct FileEncryptionView: View {
     @State private var documentExportContent: AbemDocument? = nil
     @State private var documentExportType: UTType = UTType.data
     
-    func showModalMessage(_ title:String, _ text:String) {
+    func showModalMessage(body text:String, _ title:String = "") {
         self.alertTitle = title
         self.alertText = text
         self.isAlertShowing = true
@@ -65,7 +65,7 @@ struct FileEncryptionView: View {
         let filename = "\(url.lastPathComponent)"
         let text = "Encrypted file saved to: \(filename)"
         self.isEncrypting = false
-        self.showModalMessage("Action Finished",text)
+        self.showModalMessage(body: text, "Action Finished")
     }
     
     
@@ -96,7 +96,6 @@ struct FileEncryptionView: View {
             content.resetBytes(in:0...content.count-1)
             filename = file.deletingPathExtension().appendingPathExtension("abem").lastPathComponent
             let encryptedFile = AbemDocument(from:res!.Combined(),filename)
-            let title = ""
             let text = """
             The contents of the file have been encrypted.
             Save the ciphertext to a file.
@@ -106,7 +105,7 @@ struct FileEncryptionView: View {
                 self.password.val = ""
                 self.documentExportContent = encryptedFile
                 self.documentExportType = .data
-                self.showModalMessage(title, text)
+                self.showModalMessage(body: text)
             }
             
         } catch let error {
@@ -125,7 +124,7 @@ struct FileEncryptionView: View {
                 Text("A8EM").font(.title).foregroundColor(.blue).background(Color.yellow).padding(.top, 10)
                 Divider()
                 HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
-                    SecureField("File Password",text:$password.val)
+                    SecureField("Password",text:$password.val)
                         .onChange(of: password.val,perform: onTextPasswordChanged)
                         .padding().border(Color.blue)
                     
