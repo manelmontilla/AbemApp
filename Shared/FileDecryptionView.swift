@@ -23,11 +23,12 @@ struct FileDecryptionView: View {
     @State private var alertText: String = ""
     @State private var alertTitle: String = ""
     @ObservedObject private var password = ZeroableString("")
-    @State private var showPasswordError: Bool = false
-    @State private var showPasswordOkey: Bool = false
+    @State private var showPasswordError = false
+    @State private var showPasswordOkey = false
     @State private var isLoading: Bool = false
     @State private var documentExportContent: AbemDocument? = nil
     @State private var documentExportType: UTType = UTType.data
+    @State private var decryptDisabled = true
     
     func showModalMessage(body text:String, _ title:String = "") {
         self.alertTitle = title
@@ -42,6 +43,14 @@ struct FileDecryptionView: View {
         self.isDecrypting = false
         // Show the alert dialog.
         self.isAlertShowing = true
+    }
+    
+    func onTextPasswordChanged(_ newValue: String) {
+        if newValue.count == 0 {
+            self.decryptDisabled = true
+        } else {
+            self.decryptDisabled = false
+        }
     }
     
     func onFileImportingSelected(result: Result<[URL], Error>)  {
@@ -130,6 +139,7 @@ struct FileDecryptionView: View {
                 Divider()
                 HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
                     SecureField("Password",text:$password.val)
+                        .onChange(of: password.val, perform: onTextPasswordChanged)
                         .padding().border(Color.blue)
                     
                     if showPasswordError {
@@ -150,7 +160,7 @@ struct FileDecryptionView: View {
                         isImporting = true
                     }){
                         Text("Decrypt")
-                    }.padding()
+                    }.padding().disabled(decryptDisabled)
                 }
                 
             }

@@ -28,6 +28,7 @@ struct FileEncryptionView: View {
     @State private var isLoading: Bool = false
     @State private var documentExportContent: AbemDocument? = nil
     @State private var documentExportType: UTType = UTType.data
+    @State private var encryptDisabled = true
     
     func showModalMessage(body text:String, _ title:String = "") {
         self.alertTitle = title
@@ -71,12 +72,16 @@ struct FileEncryptionView: View {
     
     func onTextPasswordChanged(_ newValue: String) {
         if newValue.count == 0 {
-            self.showPasswordError = true
+            self.showPasswordError = false
+            self.encryptDisabled = true
+            return
         }
         if Abem.PasswordStrength.Check(newValue) != .strong  {
             self.showPasswordError = true
+            self.encryptDisabled = true
         } else {
             self.showPasswordError = false
+            self.encryptDisabled = false
         }
     }
     
@@ -125,7 +130,7 @@ struct FileEncryptionView: View {
                 Divider()
                 HStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: /*@START_MENU_TOKEN@*/nil/*@END_MENU_TOKEN@*/, content: {
                     SecureField("Password",text:$password.val)
-                        .onChange(of: password.val,perform: onTextPasswordChanged)
+                        .onChange(of: password.val, perform: onTextPasswordChanged)
                         .padding().border(Color.blue)
                     
                     if showPasswordError {
@@ -150,7 +155,7 @@ struct FileEncryptionView: View {
                         self.isImporting = true
                     }, label: {
                         Text("Encrypt")
-                    }).padding()
+                    }).padding().disabled(encryptDisabled)
                 }
                 
             }
