@@ -94,6 +94,14 @@ struct FileEncryptionView: View {
                 throw ViewError.LogicalError(description: "password can not be empty")
             }
             let file = files![0]
+            
+            // We need to ask for access to the file.
+            guard file.startAccessingSecurityScopedResource() else {
+                throw  ViewError.LogicalError(description: "Unable to access file: \(file.lastPathComponent)")
+                
+            }
+            defer {file.stopAccessingSecurityScopedResource()}
+            
             var filename = file.lastPathComponent
             var content = try Data(contentsOf:file)
             var res:Abem.Ciphertext?
