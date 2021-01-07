@@ -7,7 +7,7 @@
 ## Encrypting a file
 Type a password in the password text box.
 The password must have at least 8 chars and must be composed by upper and lower letters, symbols and numbers.
-Abem will encrypt the contents of the file together with its name as metadata. By now, the metadata is limited to 256 bytes
+Abem will encrypt the contents of the file together with its name as metadata. By now, the metadata is limited to 255 bytes
 so, if the filename is longer it will be truncated.
 After the encryption is finished, you will be asked to save the encrypted content in a file.
 
