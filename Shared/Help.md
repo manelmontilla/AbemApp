@@ -1,7 +1,6 @@
 # Help
 
 ## Warning
-
 **This application did not go through any security assessment. It should not be trusted to encrypt any information which has strong security requirements**
 
 ## Encrypting a file
