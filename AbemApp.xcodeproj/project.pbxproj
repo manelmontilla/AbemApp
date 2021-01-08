@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD12F43425A8B7F800E7EA9C /* Sodium in Frameworks */ = {isa = PBXBuildFile; productRef = BD12F43325A8B7F800E7EA9C /* Sodium */; };
 		BD5208BA259901B900CA2DC6 /* Help.md in Resources */ = {isa = PBXBuildFile; fileRef = BD5208B9259901B900CA2DC6 /* Help.md */; };
 		BD5208BB259901B900CA2DC6 /* Help.md in Resources */ = {isa = PBXBuildFile; fileRef = BD5208B9259901B900CA2DC6 /* Help.md */; };
 		BD5208C22599064000CA2DC6 /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = BD5208C12599064000CA2DC6 /* Down */; };
@@ -70,6 +71,7 @@
 				BDCB30BF259F3B3A00E42224 /* abem in Frameworks */,
 				BD5208C9259906E600CA2DC6 /* Parma in Frameworks */,
 				BD5208C22599064000CA2DC6 /* Down in Frameworks */,
+				BD12F43425A8B7F800E7EA9C /* Sodium in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +174,7 @@
 				BD5208C12599064000CA2DC6 /* Down */,
 				BD5208C8259906E600CA2DC6 /* Parma */,
 				BDCB30BE259F3B3A00E42224 /* abem */,
+				BD12F43325A8B7F800E7EA9C /* Sodium */,
 			);
 			productName = "AbemApp (iOS)";
 			productReference = BDB34F252583E5210022DC19 /* AbemApp.app */;
@@ -229,6 +232,7 @@
 				BD5208C02599064000CA2DC6 /* XCRemoteSwiftPackageReference "Down" */,
 				BD5208C7259906E600CA2DC6 /* XCRemoteSwiftPackageReference "Parma" */,
 				BDCB30BD259F3B3A00E42224 /* XCRemoteSwiftPackageReference "abem" */,
+				BD12F43225A8B7F800E7EA9C /* XCRemoteSwiftPackageReference "swift-sodium" */,
 			);
 			productRefGroup = BDB34F262583E5210022DC19 /* Products */;
 			projectDirPath = "";
@@ -552,6 +556,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BD12F43225A8B7F800E7EA9C /* XCRemoteSwiftPackageReference "swift-sodium" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:manelmontilla/swift-sodium";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		BD5208C02599064000CA2DC6 /* XCRemoteSwiftPackageReference "Down" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:johnxnguyen/Down.git";
@@ -579,6 +591,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BD12F43325A8B7F800E7EA9C /* Sodium */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD12F43225A8B7F800E7EA9C /* XCRemoteSwiftPackageReference "swift-sodium" */;
+			productName = Sodium;
+		};
 		BD5208C12599064000CA2DC6 /* Down */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BD5208C02599064000CA2DC6 /* XCRemoteSwiftPackageReference "Down" */;
